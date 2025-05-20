@@ -1,3 +1,5 @@
+# A string in Python is a sequence of characters enclosed in single, double, or triple quotes.
+
 chai='Masla Chai'
 first_char=chai[0]
 print(first_char)
@@ -26,6 +28,28 @@ print('these is for Stratwith method: ',str2.startswith('hey'))
 print('these is for Swapcase method: ',str2.swapcase())
 print('these is for title method: ',str2.title())
 print('these is for Join method: ',",".join(str2))
+
+#-----------------------------------> Exercise<-----------------------------------
+text = "I am learning Python"
+print(text[0],text[-1])
+print(text[5:13])
+print(text[::-1])
+print('Python' in text)
+# if "Python" in text:
+#     print("True")
+# else:
+#     print('False')
+text2= " Strings are fun"
+print(text+text2)
+# -----------------------------------> Exercise-2<-----------------------------------
+sentence = "   Python is Awesome and python is Fun   "
+print(sentence.lower())
+print(sentence.strip())
+print(sentence.replace('Python','coding'))
+print(sentence.count('is'))
+# print(sentence.split(' '))
+print(sentence.strip().split())
+
 
 
 
