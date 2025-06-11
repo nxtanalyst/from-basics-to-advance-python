@@ -40,7 +40,7 @@ elif age >= 18:
 else:
     print(f'Group is child, ticket price is ${price_for_child}')
      
-Problem: Assign a letter grade based on a student's score: A (90-100), B (80-89), C (70-79), D (60-69), F (below 60).
+# Problem: Assign a letter grade based on a student's score: A (90-100), B (80-89), C (70-79), D (60-69), F (below 60).
 ask=int(input("Enter your marks==>"))
 
 if 90<=ask<=100:
