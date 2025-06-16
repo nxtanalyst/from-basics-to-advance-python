@@ -72,3 +72,69 @@ now second loops runs it will check  if char_count[char] == 1: than will give th
 # Problem: Compute the factorial of a number using a while loop.
 
 input_strr=6 # 6 *5*4*3*2*1
+
+num=5
+fact=1
+
+while num>0:
+    fact=fact*num
+    num-=1
+
+print(f'Factorial Given number is: {fact}')
+
+asking = int(input('Enter number b/w 1 to 10 --> '))
+while 0 < asking < 10:
+    print(asking)
+    # asking = int(input('Enter number b/w 1 to 10 --> '))
+
+count=1
+while count<=12:
+    if count%2==0:
+        print(count)
+    count+=1
+'''1. 🔄 Reverse a String
+Goal: Ask the user for a word and print it in reverse using a while loop.'''
+while True:
+    ask=input('Enter the Word-->')
+    if isinstance(ask, str):
+        print(ask[::-1])
+        break
+    
+    # else:
+    #     print('Invalid String')
+'''2. 💬 Mini Chatbot Loop
+Goal: Keep chatting until the user types "bye".'''
+while True:
+    ask=input('Bot: ')
+    if ask=='bye':
+        break
+    else:
+        print('You:',ask)
+        continue
+'''3. 🔢 Factorial Calculator
+Goal: Ask the user for a number and calculate its factorial using a while loo'''
+while True:
+    ask=int(input('Enter the num-->'))
+    if ask==1:
+        print(f'Factorial of Num is {ask}')
+        break
+    elif ask==0:
+        print(f'Factorial of Num is 1')
+        break
+    else:
+        fact = 1
+        for i in range(1, ask + 1):
+            fact *= i
+        print(f'Factorial of Num is {fact}')
+        break
+
+    # ask = int(input("Enter a number → "))
+    # fact = 1
+    # for i in range(1, ask + 1):
+    #     fact *= i
+    # print(f"Factorial of {ask} is {fact}")
+
+
+
+
+
