@@ -1,35 +1,35 @@
-# '''Funtions is block of code it rums when its called 
-#     it enhance reusadblity  ,make program more readable'''
-# def say_hello():
-#     print("Welcome to Python Functions!")
+'''Funtions is block of code it rums when its called 
+    it enhance reusadblity  ,make program more readable'''
+def say_hello():
+    print("Welcome to Python Functions!")
 
-# say_hello()
+say_hello()
 
-# def greet(name):
-#     print(f'Hello, {name}')
-# # Output: Hello, Kamal!
+def greet(name):
+    print(f'Hello, {name}')
+# Output: Hello, Kamal!
 
-# greet('Kamal')
+greet('Kamal')
 
 
-# def add(a,b):
-#     return a+b
+def add(a,b):
+    return a+b
 
-# result=add(3,7)
-# print(result)
+result=add(3,7)
+print(result)
 
-# def  multiply_and_return(c,d):
-#     return c*d
+def  multiply_and_return(c,d):
+    return c*d
 
-# res=multiply_and_return(7,3)
-# print(res)
+res=multiply_and_return(7,3)
+print(res)
 
-# def mul(p1,p2):
-#     return p1*p2
+def mul(p1,p2):
+    return p1*p2
 
-# print(mul(2,3))
-# print(mul(2,'b'))
-# print(mul('a',3))
+print(mul(2,3))
+print(mul(2,'b'))
+print(mul('a',3))
 
 import math
 def circle_stats(radius):
