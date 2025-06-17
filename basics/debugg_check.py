@@ -1,53 +1,53 @@
-# num=5
-# fact=1
+# # num=5
+# # fact=1
 
-# while num>0:
-#     fact=fact*num
-#     num-=1
+# # while num>0:
+# #     fact=fact*num
+# #     num-=1
 
-# print(f'Factorial Given number is: {fact}')
+# # print(f'Factorial Given number is: {fact}')
 
-# asking = int(input('Enter number b/w 1 to 10 --> '))
-# while 0 < asking < 10:
-#     print(asking)
-#     # asking = int(input('Enter number b/w 1 to 10 --> '))
+# # asking = int(input('Enter number b/w 1 to 10 --> '))
+# # while 0 < asking < 10:
+# #     print(asking)
+# #     # asking = int(input('Enter number b/w 1 to 10 --> '))
 
-# count=1
-# while count<=12:
-#     if count%2==0:
-#         print(count)
-#     count+=1
-# while True:
-#     ask=input('Enter the Word-->')
-#     if isinstance(ask, str):
-#         print(ask[::-1])
-#         break
+# # count=1
+# # while count<=12:
+# #     if count%2==0:
+# #         print(count)
+# #     count+=1
+# # while True:
+# #     ask=input('Enter the Word-->')
+# #     if isinstance(ask, str):
+# #         print(ask[::-1])
+# #         break
     
-#     else:
-#         print('Invalid String')
+# #     else:
+# #         print('Invalid String')
 
-# while True:
-#     ask=input('Bot: ')
-#     if ask=='bye':
-#         break
-#     else:
-#         print('You:',ask)
-#         continue
+# # while True:
+# #     ask=input('Bot: ')
+# #     if ask=='bye':
+# #         break
+# #     else:
+# #         print('You:',ask)
+# #         continue
 
-# while True:
-#     ask=int(input('Enter the num-->'))
-#     if ask==1:
-#         print(f'Factorial of Num is {ask}')
-#         break
-#     elif ask==0:
-#         print(f'Factorial of Num is 1')
-#         break
-#     else:
-#         fact = 1
-#         for i in range(1, ask + 1):
-#             fact *= i
-#         print(f'Factorial of Num is {fact}')
-#         break
+# # while True:
+# #     ask=int(input('Enter the num-->'))
+# #     if ask==1:
+# #         print(f'Factorial of Num is {ask}')
+# #         break
+# #     elif ask==0:
+# #         print(f'Factorial of Num is 1')
+# #         break
+# #     else:
+# #         fact = 1
+# #         for i in range(1, ask + 1):
+# #             fact *= i
+# #         print(f'Factorial of Num is {fact}')
+# #         break
 
 # def mult_total(exp):
 #     mult_total=1
@@ -79,9 +79,9 @@
 
 # x = count_even_odd(1, 2, 3, 4, 5, 6)
 # print(x)
-# '''⚔️ Challenge 2: Palindrome Checker
-# Problem:
-# Write a function is_palindrome(word) that checks if the word is a palindrome (same forward and backward).'''
+# # '''⚔️ Challenge 2: Palindrome Checker
+# # Problem:
+# # Write a function is_palindrome(word) that checks if the word is a palindrome (same forward and backward).'''
 
 # def is_palindrome(word):
 #     if word[::-1]==word:
@@ -92,22 +92,36 @@
 # xyz=is_palindrome('kamak')
 # print(xyz)
 
-'''⚔️ Challenge 3: Count Vowels in a Sentence
-Problem:
-Create a function count_vowels(sentence) that counts how many vowels are in the sentence.
+# '''⚔️ Challenge 3: Count Vowels in a Sentence
+# Problem:
+# Create a function count_vowels(sentence) that counts how many vowels are in the sentence.
 
-'''
-# count_vowels("Majesty rules the code!")  # Output: 8
-def count_vowels(sentence):
-    count=0
-    for i in sentence:
-        if i=='a'or i=='e' or i=='i' or i=='o'or i=='u':
-             count += 1
-    return  count
+# '''
+# # count_vowels("Majesty rules the code!")  # Output: 8
+# def count_vowels(sentence):
+#     count=0
+#     for i in sentence:
+#         if i=='a'or i=='e' or i=='i' or i=='o'or i=='u':
+#              count += 1
+#     return  count
     
 
  
 
-vowels=count_vowels("Majesty rules the code!")  # Output: 8
+# vowels=count_vowels("Majesty rules the code!")  # Output: 8
 
-print(vowels)
+# print(vowels)
+
+def primes_up_to_n(n):
+    sieve = [True] * (n + 1)
+    sieve[0:2] = [False, False]
+
+    for i in range(2, int(n**0.5) + 1):
+        if sieve[i]:
+            for j in range(i * i, n + 1, i):
+                sieve[j] = False
+
+    return [i for i, is_prime in enumerate(sieve) if is_prime]
+
+x=primes_up_to_n(100)
+print(x)
