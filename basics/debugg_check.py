@@ -25,21 +25,89 @@
     
 #     else:
 #         print('Invalid String')
-fact=1
-while True:
-    ask=int(input('Enter the num-->'))
-    if ask==1:
-        print(f'Factorial of Num is {ask}')
-        break
-    elif ask==0:
-        print(f'Factorial of Num is 1')
-        break
-    else:
-        fact = 1
-        for i in range(1, ask + 1):
-            fact *= i
-        print(f'Factorial of Num is {fact}')
-        break
 
+# while True:
+#     ask=input('Bot: ')
+#     if ask=='bye':
+#         break
+#     else:
+#         print('You:',ask)
+#         continue
 
+# while True:
+#     ask=int(input('Enter the num-->'))
+#     if ask==1:
+#         print(f'Factorial of Num is {ask}')
+#         break
+#     elif ask==0:
+#         print(f'Factorial of Num is 1')
+#         break
+#     else:
+#         fact = 1
+#         for i in range(1, ask + 1):
+#             fact *= i
+#         print(f'Factorial of Num is {fact}')
+#         break
 
+# def mult_total(exp):
+#     mult_total=1
+#     for item in exp:
+#         mult_total*=int(item)
+#     return mult_total
+
+# n1 = input("Enter the expense list for addition: ").split(',')
+# n2 = input("Enter the expense list for addition: ").split(',')
+
+# addition_total = mult_total(n1)
+# print("Total expense for list 1:", addition_total)
+
+# addition_total = mult_total(n2)
+# print("Total expense for list 2:", addition_total)
+# # print(help(mult_total))
+# '''⚔️ Challenge 1: Even or Odd Counter
+# Problem:
+# Write a function count_even_odd(numbers) that takes a list of numbers and prints how many are even and how many are odd'''
+# def count_even_odd(*num):
+#     Even_num=0
+#     odd_num=0
+#     for i in num:
+#         if i%2==0:
+#             Even_num+=1
+#         else:
+#             odd_num+=1
+#     return f'Even: {Even_num}, Odd: {odd_num}'
+
+# x = count_even_odd(1, 2, 3, 4, 5, 6)
+# print(x)
+# '''⚔️ Challenge 2: Palindrome Checker
+# Problem:
+# Write a function is_palindrome(word) that checks if the word is a palindrome (same forward and backward).'''
+
+# def is_palindrome(word):
+#     if word[::-1]==word:
+#         return f'Yes plaindrome: {word[::-1]}'
+#     else:
+#         return f'No plaindrome: {word}'
+
+# xyz=is_palindrome('kamak')
+# print(xyz)
+
+'''⚔️ Challenge 3: Count Vowels in a Sentence
+Problem:
+Create a function count_vowels(sentence) that counts how many vowels are in the sentence.
+
+'''
+# count_vowels("Majesty rules the code!")  # Output: 8
+def count_vowels(sentence):
+    count=0
+    for i in sentence:
+        if i=='a'or i=='e' or i=='i' or i=='o'or i=='u':
+             count += 1
+    return  count
+    
+
+ 
+
+vowels=count_vowels("Majesty rules the code!")  # Output: 8
+
+print(vowels)
