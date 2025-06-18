@@ -141,3 +141,51 @@ print(result_2)
 print(result_3)
 print(result_4)
 print(result_5)
+
+''' 3. Word Frequency Counter
+Problem:Ask the user to input a sentence. Write a function that returns a dictionary of each word and its frequency.'''
+# Input: "hello world hello"
+# Output: {'hello': 2, 'world': 1}
+
+def frequecny_counter(n1):
+    new_dict={}
+    word=n1.split()
+    for subwords in word: # ['Python', 'is', 'a', 'versatile', 'language.']
+        if subwords in new_dict:
+            new_dict[subwords]+=1
+            
+        else:
+            new_dict[subwords]=1
+    return new_dict
+
+result=frequecny_counter("hello world hello")
+print(result)
+
+
+
+
+def fib(numb):
+    if numb==0:
+        return 0
+    elif numb==1:
+        return 1
+    else:
+        return fib(numb-1)+fib(numb-2)
+
+ask=int(input('Enter your number: '))
+result=fib(ask)
+print(result)
+
+
+#  fo =f0 and f1=0+1=1, f2=1+2=3 , f3=3+3=6, f4=4+3=7, f5=5+7=12
+
+def password_checker(passw):
+    has_special = any(not char.isalnum() for char in passw)
+    if len(passw)>=8 and passw.isalnum() and has_special:
+        return f'Yes password has 8 charas and have number as well'
+    
+    return 'Password does not supports password criteria'
+
+ask=input('Enter your password: ')
+result=password_checker(ask)
+print(result)
