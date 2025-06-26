@@ -186,24 +186,96 @@
 # print("End Time:", after)
 # print("Execution Time (seconds):", after - start)    
 
-player_score={}
+# player_score={}
 
-with open("scores.csv", "r") as f:
-    for line in f:
-        tokens=line.split(',')
-        player=tokens[0]
-        score=int(tokens[1])
-        print(tokens)
-        print(player)
+# with open("scores.csv", "r") as f:
+#     for line in f:
+#         tokens=line.split(',')
+#         player=tokens[0]
+#         score=int(tokens[1])
+#         print(tokens)
+#         print(player)
         
-        if player in player_score:
-            player_score[player].append(score)
-        else:
-            player_score[player]=[score]
+#         if player in player_score:
+#             player_score[player].append(score)
+#         else:
+#             player_score[player]=[score]
 
 
-for player, score_list in player_score.items():
-    max_score=min(score_list)
-    min_score=min(score_list)
-    avg_score=sum(score_list)/len(score_list)
-    print(f"{player}==>Min:{min_score}, Max:{max_score}, Avg{avg_score}")
+# for player, score_list in player_score.items():
+#     max_score=min(score_list)
+#     min_score=min(score_list)
+#     avg_score=sum(score_list)/len(score_list)
+#     print(f"{player}==>Min:{min_score}, Max:{max_score}, Avg{avg_score}")
+
+# with open('check.txt','r') as f:
+#     lis=[]
+#     for line in f:
+#         lis.append(line)
+
+# print(lis)
+
+# with open('check.txt','r') as f:
+#     count=0
+#     for lines in f:
+#         count+=1
+
+# print(count)
+
+# with open('check.txt','r') as f:
+#     counter={}
+#     for line in f:
+#         words = line.strip().split()  
+#         print(words)
+#         for word in words:
+#             if word in counter:
+#                 counter[word]+=1
+#             else:
+#                 counter[word]=1
+
+# print(counter)
+
+# with open('num.txt','w') as f:
+#     f.write('12\n13\n12')
+# with open('num.txt','r') as xf:
+#         total=0
+#         lines=xf.readlines()
+#         lines_count=len(lines)
+#         for line in lines:
+#               total += int(line.strip())
+        
+      
+# print(f'The sum for it {total}')
+# print(f'Total Numbers are: {lines_count}')
+# print(f'Average is {total / len(lines)}')
+
+
+with open('reverse.txt','r') as rf:
+    lines=rf.readlines()
+    lines.reverse()
+    
+    with open('copy.txt','w') as wf:
+      
+      for line in lines:
+         clean_lines=line.strip()
+         print(clean_lines)
+         wf.write(clean_lines + '\n')
+
+
+    
+    
+        
+         
+               
+      
+      
+      
+
+
+
+
+
+
+
+        
+

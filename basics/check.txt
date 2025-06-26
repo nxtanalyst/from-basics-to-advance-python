@@ -1,0 +1,3 @@
+Welcome, Majesty!
+Your Python file-handling journey begins.
+Keep learning and ruling with Python!
