@@ -140,9 +140,5 @@ with open('scroll.txt', 'r') as f:
     print("\n📄 File content after truncation:\n")
     print(result)
 
-with open('scroll.txt', 'r') as f:
-    result = f.read()
-    print("\n📄 File content after truncation:\n")
-    print(result)
 
     
