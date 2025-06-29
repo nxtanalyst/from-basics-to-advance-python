@@ -145,3 +145,30 @@ while True:
             
     except Exception as e:
         print('Error',e)
+
+x=2000
+
+def Deposit(amou):
+      global x
+      if amou<=0:
+            raise ValueError("Deposit amount must be positive")
+      else:
+            x+=amou
+            return x
+def withdrawl(amount):
+      global x
+      if amount>x:
+            raise ValueError("Insufficient balance")
+      else:
+            x -= amount
+            return x
+
+try:      
+      asking=int(input('Enter your Deposit: '))
+      print(f'Deposited Amount: {Deposit(asking)}')
+
+      asking=int(input('Enter Withdrwal Amount: '))
+      print(f'Withdrawl Amount: {withdrawl(asking)}')
+
+except Exception as e:
+      print(e)
