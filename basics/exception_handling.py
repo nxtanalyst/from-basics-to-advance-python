@@ -1,67 +1,67 @@
-# ################################################################################################################################ 
-# try:
-#     num = int(input("Enter a number: "))
-#     result = 100 / num
-# except ZeroDivisionError:
-#     print("Can't divide by zero.")
-# ################################################################################################################################
-# try:
-#     with open('magic.txt','r') as f:
-#         f.read()
-# except:
-#     print('File not found!')
-# ################################################################################################################################
-# try:
-#     ask=int(input('ENter your age: '))
-#     if ask<0:
-#         raise ValueError("Age can't be negative!")
-# except ValueError as e:
-#     print("Caught error:", e)
-# ################################################################################################################################
+################################################################################################################################ 
+try:
+    num = int(input("Enter a number: "))
+    result = 100 / num
+except ZeroDivisionError:
+    print("Can't divide by zero.")
+################################################################################################################################
+try:
+    with open('magic.txt','r') as f:
+        f.read()
+except:
+    print('File not found!')
+################################################################################################################################
+try:
+    ask=int(input('ENter your age: '))
+    if ask<0:
+        raise ValueError("Age can't be negative!")
+except ValueError as e:
+    print("Caught error:", e)
+################################################################################################################################
 
-# try:
-#     with open('data.txt','r') as f:
-#         count=0
-#         for word in f.read():
-#             count+=1
+try:
+    with open('data.txt','r') as f:
+        count=0
+        for word in f.read():
+            count+=1
 
-# except:
-#     print('No file found, Majesty.')
-# try:
-#         f=open('diary.txt','r')
-#         # var=badvar 
-#         if f.name=='diary.txt':
-#               raise Exception
-
-# # except Exception as e:
-# #     print('Error as',e)
+except:
+    print('No file found, Majesty.')
+try:
+        f=open('diary.txt','r')
+        # var=badvar 
+        if f.name=='diary.txt':
+              raise Exception
 
 # except Exception as e:
-#     print(e)
-# except Exception as e:
-#       print(e)
-# else:
-#       print(f.read())
-#       f.close()
+#     print('Error as',e)
+
+except Exception as e:
+    print(e)
+except Exception as e:
+      print(e)
+else:
+      print(f.read())
+      f.close()
     
-# finally:
-#       print('I am executing the FINALLY')
+finally:
+      print('I am executing the FINALLY')
         
          
                
       
-# try:
-#       while True:
-#             ask=int(input('Enter The number:'))
-#             if ask is not int:
-#                   continue
-# except Exception as e:
-#       print(e)
+try:
+      while True:
+            ask=int(input('Enter The number:'))
+            if ask is not int:
+                  continue
+except Exception as e:
+      print(e)
 
-# else:
-#       print(ask)
-# finally:
-#       print('I am Executing')
+else:
+      print(ask)
+finally:
+      print('I am Executing')
 # #######################################################1. Royal Calculator#########################################################
 
 

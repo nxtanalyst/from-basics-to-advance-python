@@ -260,49 +260,75 @@
 #          clean_lines=line.strip()
 #          print(clean_lines)
 #          wf.write(clean_lines + '\n')
-try:
-        f=open('diary.txt','r')
-        # var=badvar 
-        if f.name=='diary.txt':
-              raise Exception
+# try:
+#         f=open('diary.txt','r')
+#         # var=badvar 
+#         if f.name=='diary.txt':
+#               raise Exception
+
+# # except Exception as e:
+# #     print('Error as',e)
 
 # except Exception as e:
-#     print('Error as',e)
-
-except Exception as e:
-    print(e)
-except Exception as e:
-      print(e)
-else:
-      print(f.read())
-      f.close()
+#     print(e)
+# except Exception as e:
+#       print(e)
+# else:
+#       print(f.read())
+#       f.close()
     
-finally:
-      print('I am executing the FINALLY')
+# finally:
+#       print('I am executing the FINALLY')
         
          
                
       
-try:
-      while True:
-            ask=int(input('Enter The number:'))
-            if ask is not int:
-                  continue
+# try:
+#       while True:
+#             ask=int(input('Enter The number:'))
+#             if ask is not int:
+#                   continue
+# except Exception as e:
+#       print(e)
+
+# else:
+#       print(ask)
+# finally:
+#       print('I am Executing')
+      
+x=2000
+
+def Deposit(amou):
+      global x
+      if amou<=0:
+            raise ValueError("Deposit amount must be positive")
+      else:
+            x+=amou
+            return x
+def withdrawl(amount):
+      global x
+      if amount>x:
+            raise ValueError("Insufficient balance")
+      else:
+            x -= amount
+            return x
+
+try:      
+      asking=int(input('Enter your Deposit: '))
+      print(f'Deposited Amount: {Deposit(asking)}')
+
+      asking=int(input('Enter Withdrwal Amount: '))
+      print(f'Withdrawl Amount: {withdrawl(asking)}')
+
 except Exception as e:
       print(e)
 
-else:
-      print(ask)
-finally:
-      print('I am Executing')
-      
-            
-      
 
 
 
 
 
+    
 
 
         
