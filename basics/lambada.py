@@ -94,3 +94,35 @@ name_check=["Majesty", "Royal", "Magic", "King", "Moon"]
 
 check=list(filter(lambda names:names[0]=='M',name_check))
 print(check)
+
+words = ["apple", "banana", "cherry", "date"]
+sorted_words = sorted(words, key=lambda word: word[-1])
+print(sorted_words)
+# Output: ['banana', 'apple', 'date', 'cherry']
+
+students = [("Alice", 90), ("Bob", 65), ("Charlie", 80), ("Daisy", 70)]
+passed = list(filter(lambda student: student[1] > 75, students))
+print(passed)
+# Output: [('Alice', 90), ('Charlie', 80)]
+
+names = ["Eve", "Oscar", "Umair", "Nina", "Ali", "Zane"]
+vowel_names = list(filter(lambda name: name[0].lower() in 'aeiou', names))
+print(vowel_names)
+# Output: ['Eve', 'Oscar', 'Umair', 'Ali']
+
+info = {"name": "Majesty", "role": "Ruler", "power": "Python"}
+transformed = list(map(lambda item: f"{item[0]}: {item[1]}", info.items()))
+print(transformed)
+# Output: ['name: Majesty', 'role: Ruler', 'power: Python']
+
+words = ["Hello", "world", "hello", "Python", "python"]
+seen = set()
+result = []
+for word in words:
+    lower_word = word.lower()
+    if lower_word not in seen:
+        result.append(word)
+        seen.add(lower_word)
+
+print(result)
+# Output: ['Hello', 'world', 'Python']
