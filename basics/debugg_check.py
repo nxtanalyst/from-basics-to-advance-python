@@ -296,39 +296,74 @@
 # finally:
 #       print('I am Executing')
       
-x=2000
+# x=2000
 
-def Deposit(amou):
-      global x
-      if amou<=0:
-            raise ValueError("Deposit amount must be positive")
-      else:
-            x+=amou
-            return x
-def withdrawl(amount):
-      global x
-      if amount>x:
-            raise ValueError("Insufficient balance")
-      else:
-            x -= amount
-            return x
+# def Deposit(amou):
+#       global x
+#       if amou<=0:
+#             raise ValueError("Deposit amount must be positive")
+#       else:
+#             x+=amou
+#             return x
+# def withdrawl(amount):
+#       global x
+#       if amount>x:
+#             raise ValueError("Insufficient balance")
+#       else:
+#             x -= amount
+#             return x
 
-try:      
-      asking=int(input('Enter your Deposit: '))
-      print(f'Deposited Amount: {Deposit(asking)}')
+# try:      
+#       asking=int(input('Enter your Deposit: '))
+#       print(f'Deposited Amount: {Deposit(asking)}')
 
-      asking=int(input('Enter Withdrwal Amount: '))
-      print(f'Withdrawl Amount: {withdrawl(asking)}')
+#       asking=int(input('Enter Withdrwal Amount: '))
+#       print(f'Withdrawl Amount: {withdrawl(asking)}')
 
-except Exception as e:
-      print(e)
-
-
+# except Exception as e:
+#       print(e)
 
 
+def decorator_function(oringalFuc):
+    def wrapper_function():
+        return oringalFuc()
+    return wrapper_function
+
+def display():
+    print('Display function ran')
 
 
+decorated_display=decorator_function(display)
+decorated_display()
     
+def mylogger(orig_func):
+    import logging
+    logging.basicConfig(filename='{}.log'.format(orig_func.__name__), level=logging.INFO)
+    def wrapper (*args, **kwargs):
+        logging.info(
+            'Ran with args: {}, and kwargs: {}'.format(args, kwargs))
+        return orig_func(*args, **kwargs)
+    return wrapper
+def my_timer(orig_func):
+    import time
+
+    def my_timer(orig_func):
+
+        import time
+        def wrapper(*args, **kwargs):
+            t1=time.time()
+            result=orig_func(*args, **kwargs)
+            t2=time.time()-t1
+            print('{} ran in: {} sec'.format(orig_func.__name__, t2))
+            return result
+        
+        return wrapper
+
+@mylogger
+def display_info(name,age):
+    print(f'display info ran with arguments {name} {age}')
+
+display_info()
 
 
         
