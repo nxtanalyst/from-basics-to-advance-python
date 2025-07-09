@@ -324,47 +324,88 @@
 #       print(e)
 
 
-def decorator_function(oringalFuc):
-    def wrapper_function():
-        return oringalFuc()
-    return wrapper_function
+# def decorator_function(oringalFuc):
+#     def wrapper_function():
+#         return oringalFuc()
+#     return wrapper_function
 
-def display():
-    print('Display function ran')
+# def display():
+#     print('Display function ran')
 
 
-decorated_display=decorator_function(display)
-decorated_display()
+# decorated_display=decorator_function(display)
+# decorated_display()
     
-def mylogger(orig_func):
-    import logging
-    logging.basicConfig(filename='{}.log'.format(orig_func.__name__), level=logging.INFO)
-    def wrapper (*args, **kwargs):
-        logging.info(
-            'Ran with args: {}, and kwargs: {}'.format(args, kwargs))
-        return orig_func(*args, **kwargs)
-    return wrapper
-def my_timer(orig_func):
-    import time
+# def mylogger(orig_func):
+#     import logging
+#     logging.basicConfig(filename='{}.log'.format(orig_func.__name__), level=logging.INFO)
+#     def wrapper (*args, **kwargs):
+#         logging.info(
+#             'Ran with args: {}, and kwargs: {}'.format(args, kwargs))
+#         return orig_func(*args, **kwargs)
+#     return wrapper
+# def my_timer(orig_func):
+#     import time
 
-    def my_timer(orig_func):
+#     def my_timer(orig_func):
 
-        import time
-        def wrapper(*args, **kwargs):
-            t1=time.time()
-            result=orig_func(*args, **kwargs)
-            t2=time.time()-t1
-            print('{} ran in: {} sec'.format(orig_func.__name__, t2))
-            return result
+#         import time
+#         def wrapper(*args, **kwargs):
+#             t1=time.time()
+#             result=orig_func(*args, **kwargs)
+#             t2=time.time()-t1
+#             print('{} ran in: {} sec'.format(orig_func.__name__, t2))
+#             return result
         
-        return wrapper
+#         return wrapper
 
-@mylogger
-def display_info(name,age):
-    print(f'display info ran with arguments {name} {age}')
+# @mylogger
+# def display_info(name,age):
+#     print(f'display info ran with arguments {name} {age}')
 
-display_info()
+# display_info()
 
-
+class Book:
+    def __init__(self,title, author, genre, available):
+        self.title=title
+        self.author=author
+        self.genre=genre
+        self.available=available
+    
+    def describe(self):
+        print(f'Tile of book is {self.title} and Author is {self.author} and Genre is {self.genre} and {self.available} availabe')
+    
+    def mark_borrowed(self):
+        self.available=False
+    def mark_returned(self):
+        self.available=True
+class Libary:
+    books=[]
+    
+    @classmethod
+    def add_books(cls,book):
+        cls.books.append(book)=book
+    @classmethod
+    def show_available_books(cls):
+        for book in cls.books:
+            print(cls.book)
+    @classmethod
+    def borrow_book(cls,title):
+        cls.title=title
+        if cls.title in cls.books:
+            print('Yes books is avialble')
+        else:
+            print('No books is avialble')
+    @classmethod
+    def return_book(cls,title):
+        cls.title=title
+        if cls.title in cls.books:
+            print('Yes books is Returned')
+        else:
+            print('No books is Book is not Returned')
+    
+    @staticmethod
+    def  welcome_note():
+        print('welcome to console')
         
 
