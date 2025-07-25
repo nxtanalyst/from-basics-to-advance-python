@@ -25,7 +25,7 @@ class Fraction:
 
 x=Fraction(4,5)
 y=Fraction(5,6)
-print(x+y)
-print(x-y)
-print(x*y)
-print(x/y)
+print('Addition',x+y)
+print('Substraction',x-y)
+print('Multiplication',x*y)
+print('Division',x/y)

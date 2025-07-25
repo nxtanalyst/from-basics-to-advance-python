@@ -205,7 +205,7 @@ class  RoyalVotingChamber:
         
 
 chamber = RoyalVotingChamber(["Majesty", "Zara", "Knight"])
-
+        
 print(chamber.vote("Majesty", "Yes", "king123"))
 print(chamber.vote("Knight", "No", "wrongpin"))
 print(chamber.vote("Majesty", "Yes", "king123"))
